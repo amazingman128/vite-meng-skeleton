@@ -11,6 +11,7 @@
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
   },
   "dependencies": {
+    "@jcstdio/jc-utils": "^0.0.19",
     "axios": "^1.2.1",
     "element-plus": "^2.2.27",
     "normalize.css": "^8.0.1",
