@@ -1,5 +1,5 @@
 import Cookies from '@jcstdio/jc-utils'
-import {TOKEN_KEY} from "@/constants/core-constants";
+import {TOKEN_KEY} from "@/constants/constants";
 
 // @ts-ignore
 const cookies: Cookies = new Cookies();
@@ -26,7 +26,7 @@ const remoteAdminToken = () => {
     return cookies.remove(TOKEN_KEY)
 }
 
-export {
+export default {
     getAdminToken,
     setAdminToken,
     remoteAdminToken
