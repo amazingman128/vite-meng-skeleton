@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@jcstdio/jc-utils": "^0.0.19",
+    "@unocss/reset": "^0.53.4",
     "axios": "^1.4.0",
     "element-plus": "^2.3.7",
     "normalize.css": "^8.0.1",
@@ -27,6 +28,7 @@
     "@unocss/core": "^0.53.4",
     "@unocss/preset-attributify": "^0.53.4",
     "@unocss/preset-icons": "^0.53.4",
+    "@unocss/preset-uno": "^0.53.4",
     "@vitejs/plugin-vue": "^4.2.3",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
