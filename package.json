@@ -18,7 +18,8 @@
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.4",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.2"
+    "vue-router": "^4.2.2",
+    "vue3-code-block": "^2.2.11"
   },
   "devDependencies": {
     "@iconify-json/logos": "^1.1.33",
