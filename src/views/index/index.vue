@@ -1,25 +1,32 @@
 <template>
-  <n-layout has-sider class="w-screen h-screen">
-    <div class="w-30 bg-gray-50 ">
+  <n-layout has-sider class="w-screen h-screen bg-gray-100">
+    <div class="w-30 bg-gray-50">
       <n-avatar
           size="large"
           src="/tmp/logo-tmp.png"
-          class="m-t-4 m-l-10"
+          class="main-sidebar-logo block"
       />
-      <div class="rounded-lg border-solid	 border-2	border-red-400 main-menu-item bg-blue-100">
-        <n-avatar
-            size="small"
-            src="/tmp/logo-tmp.png"
-            class="m-l-10"/>
-        <span class=" block w-full text-center">系统</span>
-      </div>
-      <div class="rounded-lg border-solid	 border-2	border-red-400 main-menu-item bg-blue-100">
-        <n-avatar
-            size="small"
-            src="/tmp/logo-tmp.png"
-            class="m-t-4 m-l-10"/>
-        <span class=" block w-full text-center">资源</span>
-      </div>
+      <n-scrollbar>
+        <div
+            class="rounded-lg border-solid	 border-2	border-red-400 main-sidebar-menu-item m-auto flex flex-flex-col m-t-2">
+          <n-avatar
+              size="small"
+              src="/tmp/logo-tmp.png"
+              class="block m-auto "/>
+          <span class=" block  text-center p-t-1">系统</span>
+        </div>
+        <div
+            class="rounded-lg border-solid	 border-2	border-red-400 main-sidebar-menu-item m-auto flex flex-flex-col m-t-2">
+          <n-avatar
+              size="small"
+              src="/tmp/logo-tmp.png"
+              class="block m-auto "/>
+          <span class=" block  text-center p-t-1">系统</span>
+        </div>
+
+      </n-scrollbar>
+
+
     </div>
     <n-layout-sider
         position="static"
@@ -31,23 +38,28 @@
         bordered
         :on-update:collapsed="layoutSideBarChangeHandler"
     >
-      <n-gradient-text class="w-full text-center text-lg font-bold	p-b-5 divide-y"
-                       gradient="linear-gradient(90deg, red 0%, green 50%, blue 100%)"
-      >
-        NamelessAdmin
-      </n-gradient-text>
-      <n-menu
-          :collapsed="collapsed"
-          :collapsed-width="64"
-          :collapsed-icon-size="22"
-          :options="menuOptions"
-          :render-label="renderMenuLabel"
-          :render-icon="renderMenuIcon"
-          :expand-icon="expandIcon"
-      />
+      <n-scrollbar>
+        <n-gradient-text class="w-full text-center text-lg font-bold	p-b-5 divide-y"
+                         gradient="linear-gradient(90deg, red 0%, green 50%, blue 100%)"
+        >
+          NamelessAdmin
+        </n-gradient-text>
+        <n-menu
+            :collapsed="collapsed"
+            :collapsed-width="64"
+            :collapsed-icon-size="22"
+            :options="menuOptions"
+            :render-label="renderMenuLabel"
+            :render-icon="renderMenuIcon"
+            :expand-icon="expandIcon"
+        />
+      </n-scrollbar>
+
     </n-layout-sider>
     <n-layout-content content-style="padding: 24px;">
-      平山道
+      <n-scrollbar>
+        kdljfdks
+      </n-scrollbar>
     </n-layout-content>
   </n-layout>
 </template>
@@ -157,15 +169,21 @@ const expandIcon = function () {
 
 </script>
 
-<style scoped >
-.main-menu-item{
+<style scoped lang="scss">
+.main-sidebar-logo {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.main-sidebar-menu-item {
+  display: block;
   position: relative;
   padding-top: 10px;
-  margin: 0 auto;
-  width: 80%;
-  margin-top:10px;
+  width: 70%;
+  margin-top: 10px;
 }
-.main-menu-item:before{
+
+.main-sidebar-menu-item:before {
   content: "";
   opacity: 0.9;
   left: -10%;
