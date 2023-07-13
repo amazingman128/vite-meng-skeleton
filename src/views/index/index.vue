@@ -1,6 +1,6 @@
 <template>
   <n-layout has-sider class="w-screen h-screen bg-gray-100">
-    <div class="w-30 bg-gray-50">
+    <div class="w-30 bg-gray-50 h-screen ">
       <n-avatar
           size="large"
           src="/tmp/logo-tmp.png"
@@ -8,43 +8,44 @@
       />
       <n-scrollbar>
         <div
-            class="rounded-lg border-solid	 border-2	border-red-400 main-sidebar-menu-item m-auto flex flex-flex-col m-t-2">
+            class="rounded-lg border-solid	 border-1	 main-sidebar-menu-item m-auto flex flex-flex-col m-t-2">
           <n-avatar
               size="small"
               src="/tmp/logo-tmp.png"
               class="block m-auto "/>
-          <span class=" block  text-center p-t-1">系统</span>
+          <span class=" block  text-center p-t-2">系统</span>
         </div>
         <div
-            class="rounded-lg border-solid	 border-2	border-red-400 main-sidebar-menu-item m-auto flex flex-flex-col m-t-2">
+            class="rounded-lg border-solid	 border-1	 main-sidebar-menu-item m-auto flex flex-flex-col m-t-2">
           <n-avatar
               size="small"
               src="/tmp/logo-tmp.png"
               class="block m-auto "/>
-          <span class=" block  text-center p-t-1">系统</span>
+          <span class=" block  text-center p-t-2">参数</span>
         </div>
 
       </n-scrollbar>
-
-
     </div>
+
     <n-layout-sider
         position="static"
         collapse-mode="width"
-        :collapsed-width="120"
-        :width="240"
+        :collapsed-width="80"
+        :width="220"
         show-trigger="arrow-circle"
-        content-style="padding: 24px;"
+        content-style="padding: 10px;"
         bordered
         :on-update:collapsed="layoutSideBarChangeHandler"
+        class=""
     >
       <n-scrollbar>
-        <n-gradient-text class="w-full text-center text-lg font-bold	p-b-5 divide-y"
-                         gradient="linear-gradient(90deg, red 0%, green 50%, blue 100%)"
+        <n-gradient-text class="w-full text-center text-lg font-black	p-b-5 "
+                         gradient="linear-gradient(90deg, black 0%, red 50%, blue 100%)"
         >
           NamelessAdmin
         </n-gradient-text>
         <n-menu
+            accordion
             :collapsed="collapsed"
             :collapsed-width="64"
             :collapsed-icon-size="22"
@@ -52,11 +53,12 @@
             :render-label="renderMenuLabel"
             :render-icon="renderMenuIcon"
             :expand-icon="expandIcon"
+            class=" "
         />
       </n-scrollbar>
 
     </n-layout-sider>
-    <n-layout-content content-style="padding: 24px;">
+    <n-layout-content class="m-l-3 m-r-3">
       <n-scrollbar>
         kdljfdks
       </n-scrollbar>
@@ -176,6 +178,8 @@ const expandIcon = function () {
 }
 
 .main-sidebar-menu-item {
+  background-color: rgba(45, 140, 240, 0.3);
+  border-color: rgba(45, 140, 240, 0.1);
   display: block;
   position: relative;
   padding-top: 10px;
@@ -190,8 +194,8 @@ const expandIcon = function () {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: indianred;
-  box-shadow: 0 0 0 1px black;
+  background-color: rgba(45, 140, 240, 1);
+  box-shadow: 0 0 0 1px rgba(45, 140, 240, 0.8);
   transition: all .3s;
   position: absolute;
   top: 50%;
