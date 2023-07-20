@@ -1,10 +1,9 @@
-import {App} from 'vue'
-import {createPinia} from 'pinia'
+import {userStore} from './modules/user'
 
-const store = createPinia()
+const store: any = {}
 
-export const setupStore = (app: App<Element>) => {
-    app.use(store)
+export const registerStore = () => {
+    store.userStore = userStore()
 }
 
-export {store}
+export default store
